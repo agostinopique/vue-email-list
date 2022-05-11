@@ -11,6 +11,11 @@
     <!-- VUE -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
+
     <link rel="stylesheet" href="./style/style.css">
 
     <title>Vue Emails</title>
@@ -21,7 +26,7 @@
         <div class="box">
             <ul>
                 <li
-                    v-for="user in " ></li>
+                    v-for="user in userEmails">{{user}}</li>
             </ul>
         </div>
     </div>

@@ -20,9 +20,11 @@ const app = new Vue({
             for(let i = 0; i < 10; i++){
                 axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
                 .then((answer) => {
-                    console.log(answer.data)
+                    this.userEmails.push(answer.data.response)
+                    console.log(answer.data.response)
                 })
             }
+            console.log(this.userEmails)
         }
     },
 
