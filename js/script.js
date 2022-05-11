@@ -12,12 +12,13 @@
 const app = new Vue({
     el: '#app',
     data: {
-        userEmails: []
+        userEmails: [],
+        emailAmount: 10
     },
 
     methods: {
         randomEmails(){
-            for(let i = 0; i < 10; i++){
+            for(let i = 0; i < this.emailAmount; i++){
                 axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
                 .then((answer) => {
                     this.userEmails.push(answer.data.response)

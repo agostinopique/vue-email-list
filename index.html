@@ -24,10 +24,22 @@
 
     <div id="app">
         <div class="box">
-            <ul>
-                <li
-                    v-for="user in userEmails">{{user}}</li>
-            </ul>
+            <h1>Email dei nostri dipendenti:</h1>
+            <div class="email-container">
+                <ul v-if="userEmails.length === emailAmount">
+                    <li
+                        v-for="user in userEmails">
+                        <a href="#">
+                            {{user}}
+                        </a>
+                    </li>
+                </ul>
+            <div
+                class="loader" 
+                v-else>
+                <img src="https://i.gifer.com/ZWdx.gif" alt="loading">
+            </div>
+        </div>
         </div>
     </div>
 
